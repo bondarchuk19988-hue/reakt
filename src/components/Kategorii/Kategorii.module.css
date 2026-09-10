@@ -1,0 +1,10 @@
+.beg{
+    display: flex;
+    padding-top: 10px;
+    background-color: rgb(14, 14, 87);
+    flex-direction: column;
+    align-items: center;
+}
+.gan{
+    font-size: 20px;
+}
