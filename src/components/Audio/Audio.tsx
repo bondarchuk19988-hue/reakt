@@ -1,24 +1,45 @@
 import s from "./Audio.module.css"
-interface propsaudio {
-    albom: string
-    muzic: string
-    muzic2: string
-    muzic3: string
+interface albomInter {
+    alboms: {
+        title: string
+        albom: string
+    }
 }
-function Audio({ albom, muzic, muzic2, muzic3 }: propsaudio) {
+interface trackInter {
+    tracks: {
+        muzic: string
+    }
+}
+interface propsAudio {
+    alboms: albomInter[]
+    tracks: trackInter[]
+}
+function Audio({ alboms, tracks }: propsAudio) {
+    const albomsPush = []
+    for (let i = 0; i < alboms.length; i++) {
+        albomsPush.push(
+            <div>
+                <img src={alboms[i].albom} className={s.albom}></img>
+                <div className={s.albomText}>{alboms[i].title}</div>
+            </div>
+        )
+    }
+    const audioPush = []
+    for (let i = 0; i < tracks.length; i++) {
+        audioPush.push(
+            <div>
+                <audio controls src={tracks[i].muzic}></audio>
+            </div>
+        )
+    }
     return (
         <div className={s.beg}>
             <div className={s.con}>
                 <div className={s.con2}>
-                    <div>
-                        <img src={albom} className={s.albom}></img>
-                    </div>
-                    <div className={s.albomText}>KBC MUZIC5</div>
+                    {albomsPush}
                 </div>
                 <div className={s.con3}>
-                    <audio controls src={muzic}></audio>
-                    <audio controls src={muzic2}></audio>
-                    <audio controls src={muzic3}></audio>
+                    {audioPush}
                 </div>
             </div>
         </div>

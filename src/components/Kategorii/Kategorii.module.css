@@ -1,10 +1,12 @@
-.beg{
-    display: flex;
-    padding-top: 10px;
-    background-color: rgb(14, 14, 87);
-    flex-direction: column;
-    align-items: center;
+.beg {
+    grid-area: k;
+    background: #0f0f5a;
+    padding: 20px;
 }
-.gan{
-    font-size: 20px;
+
+.gan {
+    background: #2a2a7e;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
 }
