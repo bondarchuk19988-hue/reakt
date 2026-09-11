@@ -1,40 +1,9 @@
-/* .beg {
-    background-color: rgb(55, 55, 156);
-    min-height: 100vh;
-}
 
-.con {
-    display: grid;
-    grid-auto-flow: column;
-    align-items: center
-}
-
-.con2 {
-    display: grid;
-    justify-items: center;
-    padding: 30px;
-}
-.con3{
-    display: grid;
-    gap: 10px;
-}
-.albom{
-    border-radius: 50px;
-}
-.albomText{
-    font-size: 50px;
-} */
- 
-/* Блок альбомов */
 .con2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   background: #222266;
   padding: 15px;
-}
-
-.albumCard {
-  text-align: center;
 }
 
 .albom {
